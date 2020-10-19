@@ -29,4 +29,4 @@ function App() {
   )
 }
 
-export default withHelmet('Panuwat | Blog App')(App)
+export default withHelmet('WearToday')(App)
