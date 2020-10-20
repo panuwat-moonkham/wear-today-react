@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import logoImage from '../assets/logo.png'
 import useScroll from '../utils/useScroll'
 
 const Container = styled.div`
@@ -35,7 +36,7 @@ function NavBar() {
   return (
     <Container isScroll={isScroll}>
       <Wrapper>
-        <Logo>Logo</Logo>
+        <Logo src={logoImage}>Logo</Logo>
         <ActionContainer>
           <Action>
             <Link to="/">Home</Link>

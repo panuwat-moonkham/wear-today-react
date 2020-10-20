@@ -19,5 +19,10 @@ export default {
   Story: {
     path: '/story/:storyId',
     component: lazy(() => import('../pages/Story'))
-  }
+  },
+  Post: {
+    path: '/post',
+    exact: true,
+    component: lazy(() => import('../pages/Post'))
+  },
 }
