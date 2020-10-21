@@ -50,6 +50,9 @@ function NavBar() {
           <Action>
             <Link to="/story">Story</Link>
           </Action>
+          <Action>
+            <Link to="/post">Post</Link>
+          </Action>
         </ActionContainer>
       </Wrapper>
     </Container>
