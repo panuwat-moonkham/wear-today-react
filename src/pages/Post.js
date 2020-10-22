@@ -1,5 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components"
+import InputTitle from "../components/Input/InputTitle";
+import InputShrit from "../components/Input/InputShirt";
+import InputPlant from "../components/Input/InputPlant";
+import InputShoes from "../components/Input/InputShoes";
+import InputHat from "../components/Input/InputHat";
+import InputAssesories from "../components/Input/InputAssesories";
 import { Title, Subtitle } from '../components/Typography'
 
 const Navbarcontainer = styled.div`
@@ -22,18 +28,25 @@ const Content = styled.div`
   
 `
 
+
 function Post() {
+  const [shirts, setShirts] = useState([]);
+  
+  const handleAddShirt = (shirtInput) => 
+    setShirts([...shirts, { id:Date.now(), content: shirtInput, type:"shirts"} ]);
+
   return(
       <>
       <Navbarcontainer>
       <Title color="">Post</Title>
       </Navbarcontainer>
       <Content id="content">
-        <input/>
-        <input/>
-        <input/>
-        <input/>
-        <input/>
+        <InputTitle/>
+        <InputShrit onSubmit={handleAddShirt}/>
+        <InputPlant/>
+        <InputShoes/>
+        <InputHat/>
+        <InputAssesories/>
       </Content>
       
       </>
