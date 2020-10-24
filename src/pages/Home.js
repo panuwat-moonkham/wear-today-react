@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import SlideShow from '../components/SlideShow'
 import ShowItem from '../components/ShowItem'
 
 const Title = styled.div`
@@ -25,7 +24,6 @@ const More = styled.p`
 function Home () {
   return (
     <>
-      <SlideShow />
       <Container>
         <Content>
           <Title>TREND</Title>
