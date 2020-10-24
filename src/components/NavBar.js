@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import useScroll from '../utils/useScroll'
 import logoImage from '../assets/logo.png'
 import BackgroungBlock from './BackgroundBlock'
 
@@ -15,8 +16,9 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex: 1;
-  align-items:center;
+  align-items: center;
   padding: 1rem;
+  justify-content: space-between;
 `
 
 const ActionContainer = styled.ul`
@@ -58,9 +60,9 @@ const Sidebar = styled.div`
   .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 3px;
   }
 `
 const Openbtn = styled.div`
@@ -71,7 +73,7 @@ const Openbtn = styled.div`
   padding: 10px;
   border: none;
   border-radius: 2px;
-  transition:.3s;
+  transition: 0.3s;
 
   &:hover {
     background-color: #111;
@@ -80,9 +82,8 @@ const Openbtn = styled.div`
 const SiteCover = styled.div`
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   bottom: 0;
-  right: 0;
   opacity: 0;
   background-color: rgba(3, 14, 27, 0.7);
   z-index: -1;
@@ -93,62 +94,51 @@ const SiteCover = styled.div`
     opacity: 1;
   }
 `
+const Login = styled.div``
+
 const Logo = styled.div`
-  width:6%;
+  width: 6%;
 `
 
 const Main = styled.div``
 
-function NavBar () {
+function NavBar() {
   const isScroll = useScroll({ scrollRange: 20 })
 
-  function openNav () {
+  function openNav() {
     document.getElementById('mySidebar').style.width = '250px'
-    document.getElementById('main').style.marginLeft = '250px'
+    document.getElementById('main').style.marginLeft = '0px'
   }
 
-  function closeNav () {
+  function closeNav() {
     document.getElementById('mySidebar').style.width = '0'
     document.getElementById('main').style.marginLeft = '0'
   }
   return (
     <Container isScroll={isScroll}>
       <Wrapper>
-
-        <Sidebar id='mySidebar'>
-          <Link className='closebtn' onClick={closeNav}>
-            &times;
+        <Sidebar id="mySidebar">
+          <Link className="closebtn" onClick={closeNav}>
+            close &times;
           </Link>
-          <Link to='#'>About</Link>
-          <Link to='#'>Services</Link>
-          <Link to='#'>Clients</Link>
-          <Link to='#'>Contact</Link>
+          <Link to="/">HOME</Link>
+          <Link to="/post">POST</Link>
+          <Link to="/read">READ</Link>
+          <Link to="/help">HELP</Link>
+          <Link to="/login">LOGIN</Link>
+          <Link to="/about">About</Link>
+          <Link to="#">Services</Link>
+          <Link to="#">Clients</Link>
+          <Link to="/contact">Contact</Link>
           <SiteCover />
         </Sidebar>
-        <Main id='main'>
+        <Main id="main">
           <Openbtn onClick={openNav}>&#9776;</Openbtn>
         </Main>
         <Logo>
-          <BackgroungBlock src={logoImage} height='8' />
+          <BackgroungBlock src={logoImage} height="8" />
         </Logo>
-
-        <ActionContainer>
-          <Action>
-            <Link to='/'>HOME</Link>
-          </Action>
-          <Action>
-            <Link to='/post'>POST</Link>
-          </Action>
-          <Action>
-            <Link to='/read'>READ</Link>
-          </Action>
-          <Action>
-            <Link to='/help'>HELP</Link>
-          </Action>
-          <Action>
-            <Link to='/login'>LOGIN</Link>
-          </Action>
-        </ActionContainer>
+        <Login>sss</Login>
       </Wrapper>
     </Container>
   )
