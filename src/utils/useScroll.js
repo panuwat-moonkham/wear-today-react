@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 
-function useScroll({ scrollRange = 20 } = {}) {
+function useScroll ({ scrollRange = 20 } = {}) {
   const [isScroll, setScroll] = useState(false)
 
-  function handleScrollEvent() {
+  function handleScrollEvent () {
     if (window.scrollY > scrollRange) return setScroll(true)
 
     return setScroll(false)
@@ -13,7 +13,7 @@ function useScroll({ scrollRange = 20 } = {}) {
     document.addEventListener('scroll', handleScrollEvent)
 
     return () => document.removeEventListener('scroll', handleScrollEvent)
-  }, [ ])
+  }, [])
 
   return isScroll
 }

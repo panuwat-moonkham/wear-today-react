@@ -16,8 +16,20 @@ export default {
     exact: true,
     component: lazy(() => import('../pages/Contact'))
   },
-  Story: {
-    path: '/story/:storyId',
-    component: lazy(() => import('../pages/Story'))
+  Post: {
+    path: '/post',
+    component: lazy(() => import('../pages/Post'))
+  },
+  Read: {
+    path: '/read',
+    component: lazy(() => import('../pages/Read'))
+  },
+  LoginRegister: {
+    path: '/login',
+    component: lazy(() => import('../pages/LoginRegister'))
+  },
+  Help: {
+    path: '/help',
+    component: lazy(() => import('../pages/Help'))
   }
 }
