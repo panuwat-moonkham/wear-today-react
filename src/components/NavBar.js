@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import logoImage from '../assets/logo.png'
 import useScroll from '../utils/useScroll'
-import logoImage from '../assets/logo.png'
+
 
 const Container = styled.div`
   width: 100%;
@@ -111,11 +111,7 @@ function NavBar () {
   return (
     <Container isScroll={isScroll}>
       <Wrapper>
-<<<<<<< HEAD
-        <Logo src={logoImage}>Logo</Logo>
-=======
         <LogoImage src={logoImage} />
->>>>>>> 74b4a57e2889b4a73053606618edadc2e8f8a039
         <ActionContainer>
           <Action>
             <Link to='/'>HOME</Link>
@@ -132,11 +128,6 @@ function NavBar () {
           <Action>
             <Link to='/login'>LOGIN</Link>
           </Action>
-<<<<<<< HEAD
-          <Action>
-            <Link to="/post">Post</Link>
-          </Action>
-=======
           <Sidebar id='mySidebar'>
             <Link
               className='closebtn'
@@ -152,7 +143,6 @@ function NavBar () {
           <Main id='main'>
             <Openbtn onClick={openNav}>&#9776;</Openbtn>
           </Main>
->>>>>>> 74b4a57e2889b4a73053606618edadc2e8f8a039
         </ActionContainer>
       </Wrapper>
     </Container>

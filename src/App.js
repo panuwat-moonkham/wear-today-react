@@ -25,8 +25,4 @@ function App () {
   )
 }
 
-<<<<<<< HEAD
-export default withHelmet('WearToday')(App)
-=======
 export default withHelmet('Wear Today')(App)
->>>>>>> 74b4a57e2889b4a73053606618edadc2e8f8a039
