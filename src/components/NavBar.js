@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import logoImage from '../assets/logo.png'
-import useScroll from '../utils/useScroll'
-
+import BackgroungBlock from './BackgroundBlock'
 
 const Container = styled.div`
   width: 100%;
@@ -16,6 +15,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex: 1;
+  align-items:center;
   padding: 1rem;
 `
 
@@ -31,21 +31,15 @@ const Action = styled.li`
   padding: 0 1rem;
 `
 
-const LogoImage = styled.div`
-  height: 20px;
-  width: auto;
-  background-color: red;
-  background-image: url(logoImage);
-  position: relative;
-`
 const Sidebar = styled.div`
   height: 100%;
   width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
-  right:0;
-  background-color: #111;
+  left: 0;
+  background-color: #fff;
+  color: #333;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
@@ -77,33 +71,42 @@ const Openbtn = styled.div`
   padding: 10px;
   border: none;
   border-radius: 2px;
+  transition:.3s;
 
   &:hover {
-    background-color: #444;
+    background-color: #111;
   }
+`
+const SiteCover = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  background-color: rgba(3, 14, 27, 0.7);
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+
+  &${Openbtn}:active {
+    z-index: 1000;
+    opacity: 1;
+  }
+`
+const Logo = styled.div`
+  width:6%;
 `
 
 const Main = styled.div``
 
-// const main = styled.main`
-//   transition: margin-left .5s; /* If you want a transition effect */
-//   padding: 20px;
-// `
-
-// const media = styled.screen`
-//   .sidebar {padding-top: 15px;}
-//   .sidebar a {font-size: 18px;}
-// `
 function NavBar () {
   const isScroll = useScroll({ scrollRange: 20 })
 
-  /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
   function openNav () {
     document.getElementById('mySidebar').style.width = '250px'
     document.getElementById('main').style.marginLeft = '250px'
   }
 
-  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
   function closeNav () {
     document.getElementById('mySidebar').style.width = '0'
     document.getElementById('main').style.marginLeft = '0'
@@ -111,7 +114,24 @@ function NavBar () {
   return (
     <Container isScroll={isScroll}>
       <Wrapper>
-        <LogoImage src={logoImage} />
+
+        <Sidebar id='mySidebar'>
+          <Link className='closebtn' onClick={closeNav}>
+            &times;
+          </Link>
+          <Link to='#'>About</Link>
+          <Link to='#'>Services</Link>
+          <Link to='#'>Clients</Link>
+          <Link to='#'>Contact</Link>
+          <SiteCover />
+        </Sidebar>
+        <Main id='main'>
+          <Openbtn onClick={openNav}>&#9776;</Openbtn>
+        </Main>
+        <Logo>
+          <BackgroungBlock src={logoImage} height='8' />
+        </Logo>
+
         <ActionContainer>
           <Action>
             <Link to='/'>HOME</Link>
@@ -128,21 +148,6 @@ function NavBar () {
           <Action>
             <Link to='/login'>LOGIN</Link>
           </Action>
-          <Sidebar id='mySidebar'>
-            <Link
-              className='closebtn'
-              onClick={closeNav}
-            >
-              &times;
-            </Link>
-            <Link to='#'>About</Link>
-            <Link to='#'>Services</Link>
-            <Link to='#'>Clients</Link>
-            <Link to='#'>Contact</Link>
-          </Sidebar>
-          <Main id='main'>
-            <Openbtn onClick={openNav}>&#9776;</Openbtn>
-          </Main>
         </ActionContainer>
       </Wrapper>
     </Container>
