@@ -23,14 +23,15 @@ const Accordion = styled.button`
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 20px;
   transition: 0.4s;
+  font-weight: 900;
 
   &:hover {
     background-color: #ccc;
   }
   p {
-    padding: 0.5rem 4rem;
+    padding: 0.5rem 2rem;
     overflow: hidden;
   }
 `
