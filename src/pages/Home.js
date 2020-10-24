@@ -1,49 +1,63 @@
 import React from 'react'
 import styled from 'styled-components'
-import backgroundImage from '../assets/background.jpg'
-import BackgroundBlock from '../components/BackgroundBlock'
-import { Title, Subtitle } from '../components/Typography'
+import { Link } from 'react-router-dom'
+import SlideShow from '../components/SlideShow'
+import ShowItem from '../components/ShowItem'
 
-const arr = new Array(250).fill('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum maximus eros,')
+const Title = styled.div`
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 1rem 0;
+`
 
-const Button = styled.button`
-  padding: 1rem 1.5rem;
-  background-color: transparent;
-  border: #fff solid 1px;
-  border-radius: 8px;
-  color: #fff;
-  margin: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: #fff;
-    color: #000;
-  }
-
+const Container = styled.div`
+  padding: 2rem 6rem;
 `
 
 const Content = styled.div`
-  padding: 8rem;
+  padding-bottom: 2rem;
 `
-
-function Home() {
+const More = styled.p`
+  font-size: 1.5rem;
+  text-align: right;
+`
+function Home () {
   return (
     <>
-      <BackgroundBlock src={backgroundImage}>
-        <Title>Travel With Us</Title>
-        <Subtitle>Lorem ipsum dolor sit amet</Subtitle>
-        <Button as="a" href="#content">
-          Look Around
-        </Button>
-      </BackgroundBlock>
-      <Content id="content">
-        {arr.map((text, index) => (
-          <p key={index}>{text}</p>
-        ))}
-      </Content>
+      <SlideShow />
+      <Container>
+        <Content>
+          <Title>TREND</Title>
+          <ShowItem>
+            <h4>Nature</h4>
+            <p>What a beautiful sunrise</p>
+          </ShowItem>
+          <More>
+            <Link>more...</Link>
+          </More>
+        </Content>
+        <Content>
+          <Title>THE JOURNEY</Title>
+          <ShowItem>
+            <h4>Nature</h4>
+            <p>What a beautiful sunrise</p>
+          </ShowItem>
+          <More>
+            <Link>more...</Link>
+          </More>
+        </Content>
+        <Content>
+          <Title>STYLE</Title>
+          <ShowItem>
+            <h4>Nature</h4>
+            <p>What a beautiful sunrise</p>
+          </ShowItem>
+          <More>
+            <Link>more...</Link>
+          </More>
+        </Content>
+      </Container>
     </>
   )
 }
