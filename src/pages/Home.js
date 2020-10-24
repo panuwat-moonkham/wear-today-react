@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import backgroundImage from '../assets/img1.jpg'
 import BackgroundBlock from '../components/BackgroundBlock'
 import { Title, Subtitle } from '../components/Typography'
+import {shirts} from '../pages/Post'
 
 const arr = new Array(250).fill('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum maximus eros,')
 
@@ -30,6 +31,7 @@ const Content = styled.div`
 `
 
 function Home() {
+
   return (
     <>
       <BackgroundBlock src={backgroundImage}>
