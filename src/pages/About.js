@@ -14,7 +14,8 @@ const Container = styled.div`
   padding: 4rem 10rem;
 `
 
-const Content = styled.div``
+const Content = styled.div`
+`
 
 function About() {
   return (
