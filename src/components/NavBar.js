@@ -100,7 +100,9 @@ const Logo = styled.div`
   width: 6%;
 `
 
-const Main = styled.div``
+const Main = styled.div`
+padding: 8 5px;
+`
 
 function NavBar() {
   const isScroll = useScroll({ scrollRange: 20 })
@@ -133,12 +135,12 @@ function NavBar() {
           <SiteCover />
         </Sidebar>
         <Main id="main">
-          <Openbtn onClick={openNav}>&#9776;</Openbtn>
+          <Openbtn onClick={openNav}>&#9776;MENU</Openbtn>
         </Main>
         <Logo>
           <BackgroungBlock src={logoImage} height="8" />
         </Logo>
-        <Login>sss</Login>
+        <Login>*ปุ่มlogin*</Login>
       </Wrapper>
     </Container>
   )
