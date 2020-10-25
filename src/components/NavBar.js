@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { useScroll } from '../utils/useScroll'
+import useScroll from '../utils/useScroll'
 import logoImage from '../assets/logo.png'
 import BackgroungBlock from './BackgroundBlock'
 
@@ -12,14 +12,12 @@ const Container = styled.div`
   background-color: ${props => (props.isScroll ? '#333' : 'transparent')};
   color: ${props => (props.isScroll ? '#fff' : '#fff')};
   transition: background-color 0.5s;
-  
 `
 const Wrapper = styled.div`
   display: flex;
   flex: 1;
-  align-items:center;
+  align-items: center;
   padding: 1rem;
-  
 `
 
 const ActionContainer = styled.ul`
@@ -34,91 +32,128 @@ const Action = styled.li`
   padding: 0 1rem;
 `
 
-const Sidebar = styled.div`
-  height: 100%;
-  width: 0;
-  position: fixed;
+// const Sidebar = styled.div`
+//   height: 100%;
+//   width: 0;
+//   position: fixed;
+//   z-index: 1;
+//   top: 0;
+//   left: 0;
+//   background-color: #fff;
+//   color: #333;
+//   overflow-x: hidden;
+//   padding-top: 60px;
+//   transition: 0.5s;
+
+//   a {
+//     padding: 8px 8px 8px 32px;
+//     text-decoration: none;
+//     font-size: 25px;
+//     color: #818181;
+//     display: block;
+//     transition: 0.3s;
+//   }
+//   & a:hover {
+//     color: #f1f1f1;
+//   }
+//   .closebtn {
+//     position: absolute;
+//     top: 0;
+//     right: 25px;
+//     font-size: 36px;
+//     margin-left: 50px;
+//   }
+// `
+// const Openbtn = styled.div`
+//   font-size: 20px;
+//   cursor: pointer;
+//   background-color: #111;
+//   color: white;
+//   padding: 10px;
+//   border: none;
+//   border-radius: 2px;
+//   transition: 0.3s;
+
+//   &:hover {
+//     background-color: #111;
+//   }
+// `
+// const SiteCover = styled.div`
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   right: 0;
+//   opacity: 0;
+//   background-color: rgba(3, 14, 27, 0.7);
+//   z-index: -1;
+//   transition: opacity 0.2s ease-in-out;
+
+//   &${Openbtn}:active {
+//     z-index: 1000;
+//     opacity: 1;
+//   }
+// `
+const Logo = styled.div`
+  width: 6%;
+`
+
+// const Main = styled.div``
+
+const DropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  color: #333;
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
 
   a {
-    padding: 8px 8px 8px 32px;
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
     display: block;
-    transition: 0.3s;
   }
-  & a:hover {
-    color: #f1f1f1;
-  }
-  .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  a:hover {
+    background-color: #ddd;
   }
 `
-const Openbtn = styled.div`
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
+
+const Dropbtn = styled.div`
   color: white;
-  padding: 10px;
+  padding: 16px;
+  
   border: none;
-  border-radius: 2px;
-  transition:.3s;
+`
 
-  &:hover {
-    background-color: #111;
+const Dropdown = styled.div`
+  position: relative;
+  display: inline-block;
+
+  &:hover ${DropdownContent} {
+    display: block;
+  }
+  &:hover ${Dropbtn} {
+    background-color: #333;
   }
 `
-const SiteCover = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  background-color: rgba(3, 14, 27, 0.7);
-  z-index: -1;
-  transition: opacity 0.2s ease-in-out;
-
-  &${Openbtn}:active {
-    z-index: 1000;
-    opacity: 1;
-  }
-`
-const Logo = styled.div`
-  width:6%;
-`
-
-const Main = styled.div``
 
 function NavBar () {
   const isScroll = useScroll({ scrollRange: 20 })
 
-  function openNav () {
-    document.getElementById('mySidebar').style.width = '250px'
-    document.getElementById('main').style.marginLeft = '250px'
-  }
+  // function openNav () {
+  //   document.getElementById('mySidebar').style.width = '250px'
+  //   document.getElementById('main').style.marginLeft = '250px'
+  // }
 
-  function closeNav () {
-    document.getElementById('mySidebar').style.width = '0'
-    document.getElementById('main').style.marginLeft = '0'
-  }
+  // function closeNav () {
+  //   document.getElementById('mySidebar').style.width = '0'
+  //   document.getElementById('main').style.marginLeft = '0'
+  // }
   return (
     <Container isScroll={isScroll}>
       <Wrapper>
-
-        <Sidebar id='mySidebar'>
+        {/* <Sidebar id='mySidebar'>
           <Link className='closebtn' onClick={closeNav}>
             &times;
           </Link>
@@ -130,7 +165,7 @@ function NavBar () {
         </Sidebar>
         <Main id='main'>
           <Openbtn onClick={openNav}>&#9776;</Openbtn>
-        </Main>
+        </Main> */}
         <Logo>
           <BackgroungBlock src={logoImage} height='8' />
         </Logo>
@@ -146,7 +181,18 @@ function NavBar () {
             <Link to='/read'>READ</Link>
           </Action>
           <Action>
-            <Link to='/help'>HELP</Link>
+            {/* <Link to='/help'>SERVICE</Link> */}
+            <Dropdown>
+              <Link>
+                <Dropbtn>SERVICE</Dropbtn>
+
+              </Link>
+              <DropdownContent>
+                <Link to='/help'>Link 1</Link>
+                <Link to='/help'>Link 2</Link>
+                <Link to='/help'>Link 3</Link>
+              </DropdownContent>
+            </Dropdown>
           </Action>
           <Action>
             <Link to='/login'>LOGIN</Link>
