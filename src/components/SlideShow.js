@@ -60,24 +60,59 @@ const RightButton = styled.button`
     border-radius: 5px;
   }
 `
+const Title = styled.div`
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+`
 
-const Dot = styled.div`
+const SubTitle = styled.div`
+  color: #fff;
+  font-size: 2rem;
+  font-weight: thin;
+`
+
+const Button = styled.button`
+  margin-top: 1rem;
+  padding: 0.2rem 1.5rem;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  font-size: 2rem;
+  color: #fff;
+  background: transparent;
+  text-transform: uppercase;
+  transition: 0.3s;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 `
 
 function SlideShow () {
   const slides = [
-    <BackgroundBlock key='1' src={image1} />,
-    <BackgroundBlock key='2' src={image2} />,
-    <BackgroundBlock key='3' src={image3} />,
-    <BackgroundBlock key='4' src={image4} />
+    <BackgroundBlock key='1' src={image1} overlay='overlay'>
+      <SubTitle>travel</SubTitle>
+      <Title>High Mountain Tourism</Title>
+      <Button>View</Button>
+    </BackgroundBlock>,
+    <BackgroundBlock key='2' src={image2} overlay='overlay'>
+      <SubTitle>trend</SubTitle>
+      <Title>Jeans</Title>
+      <Button>View</Button>
+    </BackgroundBlock>,
+    <BackgroundBlock key='3' src={image3} overlay='overlay'>
+      <SubTitle>travel</SubTitle>
+      <Title>City And River</Title>
+      <Button>View</Button>
+    </BackgroundBlock>,
+    <BackgroundBlock key='4' src={image4} overlay='overlay'>
+      <SubTitle>trend</SubTitle>
+      <Title>Sweater</Title>
+      <Button>View</Button>
+    </BackgroundBlock>
   ]
 
   const [x, setX] = useState(0)
@@ -101,11 +136,7 @@ function SlideShow () {
         })}
         <LeftButton onClick={handleGoLeft}>&#10094;</LeftButton>
         <RightButton onClick={handleGoRight}>&#10095;</RightButton>
-        <Dot>
-          <span className='dot' onClick='currentSlide(1)' />
-          <span className='dot' onClick='currentSlide(2)' />
-          <span className='dot' onClick='currentSlide(3)' />
-        </Dot>
+
       </Container>
     </>
   )

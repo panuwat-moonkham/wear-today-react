@@ -16,17 +16,18 @@ const BackgroundOverlay = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  //background-color: rgba(0, 0, 0, 0.4);
+  background-color: ${props => (!props.overlay ? '' : 'rgba(0, 0, 0, 0.4)')};
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `
 
-function BackgroungBlock ({ src, height = 100, width = 100, children, backgroundPosition = 'center', backgroundSize = 'cover' }) {
+function BackgroungBlock ({ src, height = 100, width = 100, children, overlay }) {
   return (
     <BackgroundImage src={src} height={height} width={width}>
-      <BackgroundOverlay>
+      <BackgroundOverlay overlay={overlay}>
         {children}
       </BackgroundOverlay>
     </BackgroundImage>

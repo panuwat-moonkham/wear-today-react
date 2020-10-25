@@ -76,19 +76,19 @@ function Help() {
       <Container>
         <Title>Help</Title>
 
-        <Accordion onClick={openshow}><p>Section 1</p></Accordion>
+        <Accordion onClick={openshow}><p>การใช้เว็บไซต์</p></Accordion>
         <Panel id="show">
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>
         </Panel>
-        <Accordion onClick={openshow2}><p>Section 2</p></Accordion>
+        <Accordion onClick={openshow2}><p>บัญชีผู้ใช้</p></Accordion>
         <Panel id="show2">
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>
         </Panel>
-        <Accordion onClick={openshow3}><p>Section 3</p></Accordion>
+        <Accordion onClick={openshow3}><p>ปัญหาที่พบบ่อย</p></Accordion>
         <Panel id="show3">
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>

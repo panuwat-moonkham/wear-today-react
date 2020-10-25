@@ -1,25 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import useScroll from '../utils/useScroll'
+import useScroll from '../../utils/useScroll'
 import logoImage from '../assets/logo.png'
-import BackgroungBlock from './BackgroundBlock'
+import BackgroungBlock from '../BackgroundBlock'
 
 const Container = styled.div`
   width: 100%;
   position: fixed;
   z-index: 10000;
-  background-color: ${props => (props.isScroll ? '#333' : 'transparent')};
-  color: ${props => (props.isScroll ? '#fff' : '#fff')};
+  background-color: ${props => (props.isScroll ? '#fff' : 'transparent')};
+  color: ${props => (props.isScroll ? '#000' : '#fff')};
   transition: background-color 0.5s;
-  
 `
 const Wrapper = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
   padding: 1rem;
-  
+  justify-content: space-between;
 `
 
 const ActionContainer = styled.ul`

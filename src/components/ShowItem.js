@@ -2,19 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import BackgroundBlock from '../components/BackgroundBlock'
-import image from '../assets/img1.jpg'
-
-const Container = styled.div`
-  display: flex;
-  border-radius:2px;
-`
 
 const TextBlock = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: ${props => (!props.overlay ? 'rgba(0, 0, 0, 0.4)' : '')};
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -25,13 +19,14 @@ const Item = styled.div`
   display: block;
   width: 200px;
   height: auto;
-  margin: 2rem 1rem ;
+  margin: 2rem 0rem ;
   //padding: 2rem 0;
   position: relative;
   width: 50%;
+  border:.1px solid white;
   
   &:hover ${TextBlock} {
-  height: 100%;
+  height:100%;
 }
 `
 const Text = styled.div`
@@ -46,36 +41,18 @@ const Text = styled.div`
   text-align: center;
 `
 
-function ShowItem ({ children }) {
+function ShowItem ({ children, src, height, width, overlay }) {
   return (
-    <Container>
+    <>
       <Item>
         <Link>
-          <BackgroundBlock src={image} height='40' />
-          <TextBlock>
+          <BackgroundBlock src={src} height={height} width={width} />
+          <TextBlock overlay={overlay}>
             <Text>{children}</Text>
           </TextBlock>
         </Link>
       </Item>
-      <Item>
-        <Link>
-          <BackgroundBlock src={image} height='40'>
-            <TextBlock>
-              <Text>{children}</Text>
-            </TextBlock>
-          </BackgroundBlock>
-        </Link>
-      </Item>
-      <Item>
-        <Link>
-          <BackgroundBlock src={image} height='40'>
-            <TextBlock>
-              <Text>{children}</Text>
-            </TextBlock>
-          </BackgroundBlock>
-        </Link>
-      </Item>
-    </Container>
+    </>
   )
 }
 
