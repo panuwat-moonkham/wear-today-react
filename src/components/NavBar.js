@@ -9,15 +9,17 @@ const Container = styled.div`
   width: 100%;
   position: fixed;
   z-index: 10000;
-  background-color: ${props => (props.isScroll ? '#fff' : 'transparent')};
-  color: ${props => (props.isScroll ? '#000' : '#fff')};
+  background-color: ${props => (props.isScroll ? '#333' : 'transparent')};
+  color: ${props => (props.isScroll ? '#fff' : '#fff')};
   transition: background-color 0.5s;
+  
 `
 const Wrapper = styled.div`
   display: flex;
   flex: 1;
   align-items:center;
   padding: 1rem;
+  
 `
 
 const ActionContainer = styled.ul`
