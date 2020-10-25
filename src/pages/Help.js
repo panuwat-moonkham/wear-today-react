@@ -47,22 +47,22 @@ const Panel = styled.div`
   }
 `
 
-function Help() {
-  function openshow() {
+function Help () {
+  function openshow () {
     if (document.getElementById('show').style.display === 'none') {
       document.getElementById('show').style.display = 'block'
     } else {
       document.getElementById('show').style.display = 'none'
     }
   }
-  function openshow2() {
+  function openshow2 () {
     if (document.getElementById('show2').style.display === 'none') {
       document.getElementById('show2').style.display = 'block'
     } else {
       document.getElementById('show2').style.display = 'none'
     }
   }
-  function openshow3() {
+  function openshow3 () {
     if (document.getElementById('show3').style.display === 'none') {
       document.getElementById('show3').style.display = 'block'
     } else {
@@ -72,24 +72,24 @@ function Help() {
 
   return (
     <>
-      <BackgroundBlock src={image} height="30" />
+      <BackgroundBlock src={image} height='30' />
       <Container>
         <Title>Help</Title>
 
         <Accordion onClick={openshow}><p>Section 1</p></Accordion>
-        <Panel id="show">
+        <Panel id='show'>
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>
         </Panel>
         <Accordion onClick={openshow2}><p>Section 2</p></Accordion>
-        <Panel id="show2">
+        <Panel id='show2'>
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>
         </Panel>
         <Accordion onClick={openshow3}><p>Section 3</p></Accordion>
-        <Panel id="show3">
+        <Panel id='show3'>
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>
           <p>Lorem ipsum...</p>

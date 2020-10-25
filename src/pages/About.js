@@ -16,16 +16,16 @@ const Container = styled.div`
 
 const Content = styled.div``
 
-function About() {
+function About () {
   return (
     <>
-      <BackgroundBlock src={image} height="30" />
+      <BackgroundBlock src={image} height='30' />
       <Container>
-      <Title>About</Title>
-        <Content id="content">
+        <Title>About</Title>
+        <Content id='content'>
           <h1>ABOUT WearToday</h1>
           <p>WearToday เป็นเว็บบล็อคสำหรับแลกเปลี่ยนสไตล์ เทคนิคและความเหมาะสมในการแต่งตัว</p>
-          <p></p>
+          <p />
         </Content>
       </Container>
     </>
