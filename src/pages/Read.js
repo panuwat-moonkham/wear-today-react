@@ -16,7 +16,7 @@ const Content = styled.div`
 function Read () {
   return (
     <>
-      <BackgroundBlock src={image} height='30' />
+      <BackgroundBlock src={image} height='30' overlay='overlay' />
       <Container>
         <Content id='content' />
       </Container>
