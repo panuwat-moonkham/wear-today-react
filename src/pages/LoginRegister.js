@@ -10,7 +10,7 @@ const Container = styled.div`
 const Content = styled.div`
   height: 100%;
   width: 100%;
-  padding: 1rem;
+  //padding: 1rem;
   background-color: #333;
   display: flex;
   justify-content: center;
