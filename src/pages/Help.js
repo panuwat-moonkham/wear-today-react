@@ -3,72 +3,97 @@ import styled from 'styled-components'
 import BackgroundBlock from '../components/BackgroundBlock'
 import image from '../assets/img2.jpg'
 
+const Title = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+  font-size: 80px;
+`
+
 const Container = styled.div`
-  padding: 2rem 6rem;
+  padding: 4rem 10rem;
 `
 
-const Content = styled.div`
-  
-`
+const Accordion = styled.button`
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  font-weight: 900;
 
-const handleClick = () => {
-  var acc = document.getElementById('accordion')
-
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener('click', function () {
-      this.classList.toggle('active')
-      var panel = this.nextElementSibling
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + 'px'
-      }
-    })
+  &:hover {
+    background-color: #ccc;
   }
-}
+  p {
+    padding: 0.5rem 2rem;
+    overflow: hidden;
+  }
+`
+const Panel = styled.div`
+  padding: 0.5rem 4rem;
+  background-color: white;
+  display: none;
 
-function Help () {
+  p {
+    padding: 0.5rem 0;
+    background-color: white;
+    overflow: hidden;
+  }
+`
+
+function Help() {
+  function openshow() {
+    if (document.getElementById('show').style.display === 'none') {
+      document.getElementById('show').style.display = 'block'
+    } else {
+      document.getElementById('show').style.display = 'none'
+    }
+  }
+  function openshow2() {
+    if (document.getElementById('show2').style.display === 'none') {
+      document.getElementById('show2').style.display = 'block'
+    } else {
+      document.getElementById('show2').style.display = 'none'
+    }
+  }
+  function openshow3() {
+    if (document.getElementById('show3').style.display === 'none') {
+      document.getElementById('show3').style.display = 'block'
+    } else {
+      document.getElementById('show3').style.display = 'none'
+    }
+  }
+
   return (
     <>
-      <BackgroundBlock src={image} height='30' />
+      <BackgroundBlock src={image} height="30" />
       <Container>
-        <Content id='content'>
-          <h2>Accordion with symbols</h2>
-          <p>
-            In this example we have added a "plus" sign to each button. When the
-            user clicks on the button, the "plus" sign is replaced with a
-            "minus" sign.
-          </p>
-          <button id='accordion' onClick={handleClick}>Section 1</button>
-          <div id='panel'>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
+        <Title>Help</Title>
 
-          <button id='accordion'>Section 2</button>
-          <div id='panel'>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-
-          <button id='accordion'>Section 3</button>
-          <div id='panel'>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-        </Content>
+        <Accordion onClick={openshow}><p>Section 1</p></Accordion>
+        <Panel id="show">
+          <p>Lorem ipsum...</p>
+          <p>Lorem ipsum...</p>
+          <p>Lorem ipsum...</p>
+        </Panel>
+        <Accordion onClick={openshow2}><p>Section 2</p></Accordion>
+        <Panel id="show2">
+          <p>Lorem ipsum...</p>
+          <p>Lorem ipsum...</p>
+          <p>Lorem ipsum...</p>
+        </Panel>
+        <Accordion onClick={openshow3}><p>Section 3</p></Accordion>
+        <Panel id="show3">
+          <p>Lorem ipsum...</p>
+          <p>Lorem ipsum...</p>
+          <p>Lorem ipsum...</p>
+        </Panel>
       </Container>
     </>
   )

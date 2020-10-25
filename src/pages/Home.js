@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import SlideShow from '../components/SlideShow'
 import ShowItem from '../components/ShowItem'
 import image from '../assets/img2.jpg'
 import logoImage from '../assets/logo.png'
@@ -33,7 +32,6 @@ display:flex;
 function Home () {
   return (
     <>
-      <SlideShow />
       <Container>
         <Content>
           <Title>TREND</Title>
