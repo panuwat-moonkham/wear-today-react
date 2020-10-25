@@ -3,6 +3,7 @@ import styled from 'styled-components'
 // import { Link } from 'react-router-dom'
 
 const Container = styled.div`
+  height: 300px;
   width: 100%;
   z-index: 10000;
   background-color: black;
@@ -15,16 +16,13 @@ const Wrapper = styled.div`
   padding: 2rem;
 `
 
-const Logo = styled.div`
-
-`
+const Logo = styled.div``
 
 function Footer () {
   return (
     <Container>
       <Wrapper>
         <Logo />
-
       </Wrapper>
     </Container>
   )
