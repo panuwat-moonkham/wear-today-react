@@ -24,7 +24,7 @@ export const BigBlock = styled.div`
 export const Block = styled.div`
   border-radius: 5px;
   font-size: 24px;
-  background-color: #ccc;
+  background-color: #ff8f84;
   display: flex;
   justify-content: center;
   align-items: center;
