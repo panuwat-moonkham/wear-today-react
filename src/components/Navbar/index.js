@@ -60,9 +60,9 @@ function NavBar() {
           </Action>
           <Action>
             <Dropdown>
-              
-                <Dropbtn>SERVICE</Dropbtn>
-              
+             
+                <Dropbtn><Link>SERVICE</Link></Dropbtn>
+               
               <DropdownContent>
                 <Link to="/help">Help</Link>
                 <Link to="/contact">Contact</Link>
