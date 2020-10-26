@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import useScroll from '../utils/useScroll'
-import logoImage from '../assets/logo.png'
-import BackgroungBlock from './BackgroundBlock'
+import useScroll from '../../utils/useScroll'
+import logoImage from '../../assets/logo.png'
+import BackgroungBlock from '../BackgroundBlock'
 
 const Container = styled.div`
   width: 100%;
