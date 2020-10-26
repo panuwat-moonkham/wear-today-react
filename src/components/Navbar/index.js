@@ -43,25 +43,25 @@ const DropdownContent = styled.div`
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 110px;
   z-index: 1;
+  border-radius: 5px;
 
   a {
     color: black;
-    padding: 12px 16px;
+    padding: 14px 0;
+    padding-left: 10px;
     text-decoration: none;
     display: block;
   }
   a:hover {
     background-color: #ddd;
+    border-radius: 5px;
   }
 `
 
 const Dropbtn = styled.div`
   color: white;
-  padding: 16px;
-  
   border: none;
 `
 
@@ -72,12 +72,9 @@ const Dropdown = styled.div`
   &:hover ${DropdownContent} {
     display: block;
   }
-  &:hover ${Dropbtn} {
-    background-color: #333;
-  }
 `
 
-function NavBar () {
+function NavBar() {
   const isScroll = useScroll({ scrollRange: 20 })
 
   // function openNav () {
@@ -106,35 +103,35 @@ function NavBar () {
           <Openbtn onClick={openNav}>&#9776;</Openbtn>
         </Main> */}
         <Logo>
-          <BackgroungBlock src={logoImage} height='8' />
+          <Link to="/">
+            <BackgroungBlock src={logoImage} height="8" />
+          </Link>
         </Logo>
 
         <ActionContainer>
           <Action>
-            <Link to='/'>HOME</Link>
+            <Link to="/">HOME</Link>
           </Action>
           <Action>
-            <Link to='/post'>POST</Link>
+            <Link to="/post">POST</Link>
           </Action>
           <Action>
-            <Link to='/read'>READ</Link>
+            <Link to="/read">READ</Link>
           </Action>
           <Action>
-            {/* <Link to='/help'>SERVICE</Link> */}
             <Dropdown>
               <Link>
                 <Dropbtn>SERVICE</Dropbtn>
-
               </Link>
               <DropdownContent>
-                <Link to='/help'>Link 1</Link>
-                <Link to='/help'>Link 2</Link>
-                <Link to='/help'>Link 3</Link>
+                <Link to="/help">Help</Link>
+                <Link to="/contact">Contact</Link>
+                <Link to="/about">About us</Link>
               </DropdownContent>
             </Dropdown>
           </Action>
           <Action>
-            <Link to='/login'>LOGIN</Link>
+            <Link to="/login">LOGIN</Link>
           </Action>
         </ActionContainer>
       </Wrapper>
