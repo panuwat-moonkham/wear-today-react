@@ -1,9 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navbar should  render layout correcyly 1`] = `undefined`;
-
-exports[`Navbar should contains logo text 1`] = `undefined`;
-
 exports[`Navbar should render Logo layout correcyly 1`] = `undefined`;
 
 exports[`Navbar should render layout correcyly 1`] = `
@@ -12,21 +8,25 @@ exports[`Navbar should render layout correcyly 1`] = `
     class="sc-dlnjPT jLdvev"
   >
     <div
-      class="sc-hKFyIo krGLn"
+      class="sc-hKFyIo kYnWLp"
     >
       <div
         class="sc-iCoHVE ecAjJP"
       >
-        <div
-          class="sc-bdnylx WVWuq"
-          height="8"
-          src="logo.png"
-          width="100"
+        <a
+          href="/"
         >
           <div
-            class="sc-gtssRu fLfzOz"
-          />
-        </div>
+            class="sc-bdnylx WVWuq"
+            height="8"
+            src="logo.png"
+            width="100"
+          >
+            <div
+              class="sc-gtssRu fLfzOz"
+            />
+          </div>
+        </a>
       </div>
       <ul
         class="sc-eCApGN hiDcNC"
@@ -61,36 +61,49 @@ exports[`Navbar should render layout correcyly 1`] = `
         <li
           class="sc-jSFkmK kVmsyM"
         >
-          <a
-            href="/help"
+          <div
+            class="sc-jrsJCI kOXQdV"
           >
-            HELP
-          </a>
+            <a
+              href=""
+            >
+              <div
+                class="sc-pNWxx cAGREy"
+              >
+                SERVICE
+              </div>
+            </a>
+            <div
+              class="sc-fujyUd emIfTs"
+            >
+              <a
+                href="/help"
+              >
+                Help
+              </a>
+              <a
+                href="/contact"
+              >
+                Contact
+              </a>
+              <a
+                href="/about"
+              >
+                About us
+              </a>
+            </div>
+          </div>
         </li>
         <li
           class="sc-jSFkmK kVmsyM"
         >
           <a
-            href="/about"
+            href="/login"
           >
-            About
-          </a>
-        </li>
-        <li
-          class="sc-jSFkmK kVmsyM"
-        >
-          <a
-            href="/contact"
-          >
-            Contact
+            LOGIN
           </a>
         </li>
       </ul>
-      <div
-        class="sc-gKAblj"
-      >
-        *ปุ่มlogin*
-      </div>
     </div>
   </div>
 </div>
