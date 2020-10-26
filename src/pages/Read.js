@@ -14,12 +14,12 @@ const Content = styled.div`
   background-color: #333;
 `
 
-function Read () {
+function Read() {
   return (
     <>
-      <BackgroundBlock src={image} height='30' overlay='overlay' />
+      <BackgroundBlock src={image} height="30" overlay="overlay" />
       <Container>
-        <Content id='content'>
+        <Content id="content">
           <ReadContent />
         </Content>
       </Container>
