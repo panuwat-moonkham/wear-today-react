@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   html, body, #root{
     height: 100vh;
     width: 100%;
+    background-color: #faded6;
     
     font-family: 'Kanit', sans-serif;
     font-size:20px;
