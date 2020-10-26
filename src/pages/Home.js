@@ -94,13 +94,13 @@ function Home () {
           </More>
         </Content>
         <Item>
-          <ShowItem src={logoImage} height='40' overlay='none' />
+          <ShowItem src={logoImage} height='40' textSlide='none' />
           {/* <BackgroundBlock src={logoImage} height='40' width='17' /> */}
-          <ShowItem src={image} height='40' overlay='none' />
-          <ShowItem src={image} height='40' overlay='none' />
-          <ShowItem src={image} height='40' overlay='none' />
-          <ShowItem src={image} height='40' overlay='none' />
-          <ShowItem src={image} height='40' overlay='none' />
+          <ShowItem src={image} height='40' textSlide='none' />
+          <ShowItem src={image} height='40' textSlide='none' />
+          <ShowItem src={image} height='40' textSlide='none' />
+          <ShowItem src={image} height='40' textSlide='none' />
+          <ShowItem src={image} height='40' textSlide='none' />
         </Item>
       </Container>
     </>

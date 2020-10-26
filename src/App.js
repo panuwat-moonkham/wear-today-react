@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import withHelmet from './utils/withHelmet'
 import routes from './config/routes'
 import GlobalStyle from './components/GlobalStyle'
-import NavBar from './components/NavBar'
+import NavBar from './components/Navbar'
 import Footer from './components/Footer'
 
 function App () {

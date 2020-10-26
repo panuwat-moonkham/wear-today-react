@@ -21,6 +21,7 @@ function Read () {
       <Container>
         <Content id='content'>
           <ReadContent />
+
         </Content>
       </Container>
     </>

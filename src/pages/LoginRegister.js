@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BackgroundBlock from '../components/BackgroundBlock'
-import image from '../assets/img2.jpg'
+import image from '../assets/img1.jpg'
 
 const Container = styled.div`
   padding: 2rem 6rem;

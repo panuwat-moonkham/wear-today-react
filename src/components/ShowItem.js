@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import BackgroundBlock from '../components/BackgroundBlock'
+import BackgroundBlock from './BackgroundBlock'
 
 const TextBlock = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: ${props => (!props.overlay ? 'rgba(0, 0, 0, 0.4)' : '')};
+  background-color: ${props => (!props.textSlide ? 'rgba(0, 0, 0, 0.4)' : '')};
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -27,6 +27,7 @@ const Item = styled.div`
   
   &:hover ${TextBlock} {
   height:100%;
+
 }
 `
 const Text = styled.div`
@@ -41,13 +42,13 @@ const Text = styled.div`
   text-align: center;
 `
 
-function ShowItem ({ children, src, height, width, overlay }) {
+function ShowItem ({ children, src, height, width, textSlide, fade }) {
   return (
     <>
       <Item>
         <Link>
           <BackgroundBlock src={src} height={height} width={width} />
-          <TextBlock overlay={overlay}>
+          <TextBlock textSlide={textSlide} fade={fade}>
             <Text>{children}</Text>
           </TextBlock>
         </Link>

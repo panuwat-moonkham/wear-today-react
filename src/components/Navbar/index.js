@@ -185,7 +185,7 @@ function NavBar () {
             <Dropdown>
               <Link>
                 <Dropbtn>SERVICE</Dropbtn>
-
+                <i className='fa fa-caret-down' />
               </Link>
               <DropdownContent>
                 <Link to='/help'>Link 1</Link>
