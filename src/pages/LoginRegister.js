@@ -8,10 +8,8 @@ const Container = styled.div`
 `
 
 const Content = styled.div`
-  height: 100%;
-  width: 100%;
-  //padding: 1rem;
-  background-color: #333;
+  height: 20rem;
+  width: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,113 +17,145 @@ const Content = styled.div`
 
 const FormLogin = styled.div`
   height: 100%;
-  width: 50%;
-  background-color: #111;
+  width: 5%;
+  background-color: #ccc;
   text-align: center;
-  flex-direction:column;
+  flex-direction: column;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
 
-  h2{
-    font-size:2rem;
+  form {
+    margin-top: 50px;
+    display: none;
+  }
+  h2 {
+    font-size: 2rem;
     margin: 20px 0;
   }
 
-  input{
-    width:80%;
-    height:30px;
-    margin-bottom:10px;
+  input {
+    width: 70%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 40px;
   }
 
-  button{
-    width:80%;
-    margin-bottom:10px;
-    }
+  button {
+    width: 30%;
+    padding: 0.5rem 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+  }
 `
 
 const FormSignUp = styled.div`
-  height: 100%;
-  width: 50%;
-  background-color: #111;
+  background-color: #ebebeb;
   text-align: center;
-
-  h2{
-    font-size:2rem;
+  height: 100%;
+  width: 60%;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+  h2 {
+    font-size: 2rem;
     margin: 20px 0;
   }
 
-  input{
-    width:80%;
-    height:30px;
-    margin-bottom:10px;
+  input {
+    width: 70%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 40px;
   }
 
-  button{
-    width:80%;
-    margin-bottom:10px;
-    }
+  button {
+    width: 30%;
+    padding: 0.5rem 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+  }
+  form {
+    padding: 20px;
+  }
+`
+const Change = styled.div`
+height:100%;
+color:red;
+padding:16px;
+background-color: #fff;
+border-radius:5px;
 `
 
-function LoginRegister () {
+function LoginRegister() {
+  function login() {
+    if (document.getElementById('login1').style.display === 'none') {
+      document.getElementById('login1').style.display = 'block'
+      document.getElementById('login2').style.display = 'none'
+      document.getElementById('w1').style.width = '60%'
+      document.getElementById('w2').style.width = '5%'
+    } else {
+      document.getElementById('w1').style.width = '5%'
+      document.getElementById('w2').style.width = '60%'
+      document.getElementById('login1').style.display = 'none'
+      document.getElementById('login2').style.display = 'block'
+    }
+  }
   return (
     <>
-      <BackgroundBlock src={image} height='100'>
+      <BackgroundBlock src={image} height="100">
         <Container>
-          <Content id='content'>
-            <FormLogin>
-              <form>
-                <h2>Sign In</h2>
-                <label>
-                  <input type='text' name='email' placeholder='Email' />
-                </label>
-                <label>
-                  <input type='text' name='password' placeholder='Password' />
-                </label>
-
-                <button className='submit' type='submit'>
-                  Sign In
-                </button>
-                <p className='forgot-pass'>Forgot Password ?</p>
-              </form>
-            </FormLogin>
-            <FormSignUp>
-              <form>
+          <Content id="content">
+            <FormSignUp id="w2">
+              <form id="login2">
                 <h2>Sign Up</h2>
                 <label>
+                  <input type="text" name="username" placeholder="Name" />
+                </label>
+                <label>
+                  <input type="email" name="email" placeholder="Email" />
+                </label>
+                <label>
                   <input
-                    type='text'
-                    name='username'
-                    id='username'
-                    placeholder='Name'
+                    type="password"
+                    name="password"
+                    placeholder="Password"
                   />
                 </label>
                 <label>
                   <input
-                    type='email'
-                    name='email'
-                    id='email'
-                    placeholder='Email'
+                    type="Password"
+                    name="confirmPassword"
+                    placeholder="Confirm Password"
                   />
                 </label>
-                <label>
-                  <input
-                    type='password'
-                    name='password'
-                    id='password'
-                    placeholder='Password'
-                  />
-                </label>
-                <label>
-                  <input
-                    type='Password'
-                    name='confirmPassword'
-                    id='confirmPassword'
-                    placeholder='Confirm Password'
-                  />
-                </label>
-                <button type='submit' className='submit'>
-                  Sign Up Now
+                <button type="submit" id="login2" className="submit">
+                  Sign Up
                 </button>
               </form>
             </FormSignUp>
+            <Change onClick={login} id="text">๐</Change>
+            <FormLogin id="w1">
+              <form id="login1">
+                <h2>Sign In</h2>
+                <label>
+                  <input type="text" name="email" placeholder="Email" />
+                </label>
+                <label>
+                  <input type="text" name="password" placeholder="Password" />
+                </label>
+
+                <button className="submit" type="submit">
+                  Sign In
+                </button>
+                <p>Forgot Password ?</p>
+              </form>
+            </FormLogin>
           </Content>
         </Container>
       </BackgroundBlock>
