@@ -24,12 +24,16 @@ const BackgroundOverlay = styled.div`
   align-items: center;
 `
 
-function BackgroungBlock ({ src, height = 100, width = 100, children, overlay }) {
+function BackgroungBlock ({
+  src,
+  height = 100,
+  width = 100,
+  children,
+  overlay
+}) {
   return (
     <BackgroundImage src={src} height={height} width={width}>
-      <BackgroundOverlay overlay={overlay}>
-        {children}
-      </BackgroundOverlay>
+      <BackgroundOverlay overlay={overlay}>{children}</BackgroundOverlay>
     </BackgroundImage>
   )
 }

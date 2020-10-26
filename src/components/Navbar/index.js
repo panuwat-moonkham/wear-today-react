@@ -31,69 +31,8 @@ const ActionContainer = styled.ul`
 const Action = styled.li`
   padding: 0 1rem;
 `
+// const Login = styled.div``
 
-// const Sidebar = styled.div`
-//   height: 100%;
-//   width: 0;
-//   position: fixed;
-//   z-index: 1;
-//   top: 0;
-//   left: 0;
-//   background-color: #fff;
-//   color: #333;
-//   overflow-x: hidden;
-//   padding-top: 60px;
-//   transition: 0.5s;
-
-//   a {
-//     padding: 8px 8px 8px 32px;
-//     text-decoration: none;
-//     font-size: 25px;
-//     color: #818181;
-//     display: block;
-//     transition: 0.3s;
-//   }
-//   & a:hover {
-//     color: #f1f1f1;
-//   }
-//   .closebtn {
-//     position: absolute;
-//     top: 0;
-//     right: 25px;
-//     font-size: 36px;
-//     margin-left: 50px;
-//   }
-// `
-// const Openbtn = styled.div`
-//   font-size: 20px;
-//   cursor: pointer;
-//   background-color: #111;
-//   color: white;
-//   padding: 10px;
-//   border: none;
-//   border-radius: 2px;
-//   transition: 0.3s;
-
-//   &:hover {
-//     background-color: #111;
-//   }
-// `
-// const SiteCover = styled.div`
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   right: 0;
-//   opacity: 0;
-//   background-color: rgba(3, 14, 27, 0.7);
-//   z-index: -1;
-//   transition: opacity 0.2s ease-in-out;
-
-//   &${Openbtn}:active {
-//     z-index: 1000;
-//     opacity: 1;
-//   }
-// `
 const Logo = styled.div`
   width: 6%;
 `
@@ -104,25 +43,25 @@ const DropdownContent = styled.div`
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 110px;
   z-index: 1;
+  border-radius: 5px;
 
   a {
     color: black;
-    padding: 12px 16px;
+    padding: 14px 0;
+    padding-left: 10px;
     text-decoration: none;
     display: block;
   }
   a:hover {
     background-color: #ddd;
+    border-radius: 5px;
   }
 `
 
 const Dropbtn = styled.div`
   color: white;
-  padding: 16px;
-  
   border: none;
 `
 
@@ -132,9 +71,6 @@ const Dropdown = styled.div`
 
   &:hover ${DropdownContent} {
     display: block;
-  }
-  &:hover ${Dropbtn} {
-    background-color: #333;
   }
 `
 
@@ -167,7 +103,9 @@ function NavBar () {
           <Openbtn onClick={openNav}>&#9776;</Openbtn>
         </Main> */}
         <Logo>
-          <BackgroungBlock src={logoImage} height='8' />
+          <Link to='/'>
+            <BackgroungBlock src={logoImage} height='8' />
+          </Link>
         </Logo>
 
         <ActionContainer>
@@ -181,16 +119,14 @@ function NavBar () {
             <Link to='/read'>READ</Link>
           </Action>
           <Action>
-            {/* <Link to='/help'>SERVICE</Link> */}
             <Dropdown>
               <Link>
                 <Dropbtn>SERVICE</Dropbtn>
-                <i className='fa fa-caret-down' />
               </Link>
               <DropdownContent>
-                <Link to='/help'>Link 1</Link>
-                <Link to='/help'>Link 2</Link>
-                <Link to='/help'>Link 3</Link>
+                <Link to='/help'>Help</Link>
+                <Link to='/contact'>Contact</Link>
+                <Link to='/about'>About us</Link>
               </DropdownContent>
             </Dropdown>
           </Action>
