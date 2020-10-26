@@ -21,8 +21,8 @@ const FormLogin = styled.div`
   background-color: #ccc;
   text-align: center;
   flex-direction: column;
-  border-top-right-radius:10px;
-  border-bottom-right-radius:10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 
   form {
     margin-top: 50px;
@@ -48,16 +48,17 @@ const FormLogin = styled.div`
     margin-bottom: 10px;
     border-radius: 5px;
     border: none;
+    background-color: #fff;
   }
 `
 
 const FormSignUp = styled.div`
-  background-color: #ebebeb;
+  background-color: #f4e3d7;
   text-align: center;
   height: 100%;
   width: 60%;
-  border-top-left-radius:10px;
-  border-bottom-left-radius:10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   h2 {
     font-size: 2rem;
     margin: 20px 0;
@@ -84,12 +85,23 @@ const FormSignUp = styled.div`
     padding: 20px;
   }
 `
-const Change = styled.div`
-height:100%;
-color:red;
-padding:16px;
-background-color: #fff;
-border-radius:5px;
+const Change = styled.button`
+  height: 100%;
+  color: red;
+  padding: 16px;
+  background-color: #fff;
+  border:none;
+  font-weight:900;
+`
+const Change2 = styled.button`
+  height: 100%;
+  color: red;
+  padding: 16px;
+  background-color: #fff;
+  border:none;
+  display: none;
+  font-weight:900;
+  
 `
 
 function LoginRegister() {
@@ -99,11 +111,15 @@ function LoginRegister() {
       document.getElementById('login2').style.display = 'none'
       document.getElementById('w1').style.width = '60%'
       document.getElementById('w2').style.width = '5%'
+      document.getElementById('text2').style.display = 'block'
+      document.getElementById('text').style.display = 'none'
     } else {
       document.getElementById('w1').style.width = '5%'
       document.getElementById('w2').style.width = '60%'
       document.getElementById('login1').style.display = 'none'
       document.getElementById('login2').style.display = 'block'
+      document.getElementById('text2').style.display = 'none'
+      document.getElementById('text').style.display = 'block'
     }
   }
   return (
@@ -139,7 +155,11 @@ function LoginRegister() {
                 </button>
               </form>
             </FormSignUp>
-            <Change onClick={login} id="text">๐</Change>
+            <Change onClick={login} id="text">
+              Sing in
+            </Change>
+            <Change2 onClick={login} id="text2">Sing up</Change2>
+
             <FormLogin id="w1">
               <form id="login1">
                 <h2>Sign In</h2>
