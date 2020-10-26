@@ -3,11 +3,12 @@ import styled from 'styled-components'
 import BackgroundBlock from '../components/BackgroundBlock'
 import image from '../assets/img2.jpg'
 
+
 const Title = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 4rem;
   font-size: 80px;
+  color:white;
 `
 
 const Container = styled.div`
@@ -16,6 +17,9 @@ const Container = styled.div`
 
 const Content = styled.div`
   font-size: 24px;
+  padding: 50px;
+  background-color: #ccc;
+  border-radius:5px;
 
   h1 {
     font-size: 32px;
@@ -23,15 +27,15 @@ const Content = styled.div`
   }
   
   p{
+   
   }
 `
 
 function About () {
   return (
     <>
-      <BackgroundBlock src={image} height='30' />
-      <Container>
-        <Title>About</Title>
+ <BackgroundBlock src={image} height="40" overlay='overlay' ><Title>About</Title></BackgroundBlock>      <Container>
+
         <Content id="content">
           <h1>ABOUT WearToday</h1>
           <p>
