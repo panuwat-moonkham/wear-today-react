@@ -40,6 +40,7 @@ min-width: 110px;
 z-index: 1;
 border-radius: 5px;
 
+
 a {
   color: black;
   padding: 14px 0;
@@ -54,13 +55,14 @@ a:hover {
 `
 
 export const Dropbtn = styled.div`
-color: white;
 border: none;
+
 `
 
 export const Dropdown = styled.div`
 position: relative;
 display: inline-block;
+
 
 &:hover ${DropdownContent} {
   display: block;
