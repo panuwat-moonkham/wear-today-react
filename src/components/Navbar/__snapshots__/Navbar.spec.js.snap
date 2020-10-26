@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should  render layout correcyly 1`] = `undefined`;
+
+exports[`Navbar should contains logo text 1`] = `undefined`;
+
+exports[`Navbar should render Logo layout correcyly 1`] = `undefined`;
+
+exports[`Navbar should render layout correcyly 1`] = `
+<div>
+  <div
+    class="sc-dlnjPT jLdvev"
+  >
+    <div
+      class="sc-hKFyIo krGLn"
+    >
+      <div
+        class="sc-iCoHVE ecAjJP"
+      >
+        <div
+          class="sc-bdnylx WVWuq"
+          height="8"
+          src="logo.png"
+          width="100"
+        >
+          <div
+            class="sc-gtssRu fLfzOz"
+          />
+        </div>
+      </div>
+      <ul
+        class="sc-eCApGN hiDcNC"
+      >
+        <li
+          class="sc-jSFkmK kVmsyM"
+        >
+          <a
+            href="/"
+          >
+            HOME
+          </a>
+        </li>
+        <li
+          class="sc-jSFkmK kVmsyM"
+        >
+          <a
+            href="/post"
+          >
+            POST
+          </a>
+        </li>
+        <li
+          class="sc-jSFkmK kVmsyM"
+        >
+          <a
+            href="/read"
+          >
+            READ
+          </a>
+        </li>
+        <li
+          class="sc-jSFkmK kVmsyM"
+        >
+          <a
+            href="/help"
+          >
+            HELP
+          </a>
+        </li>
+        <li
+          class="sc-jSFkmK kVmsyM"
+        >
+          <a
+            href="/about"
+          >
+            About
+          </a>
+        </li>
+        <li
+          class="sc-jSFkmK kVmsyM"
+        >
+          <a
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+      <div
+        class="sc-gKAblj"
+      >
+        *ปุ่มlogin*
+      </div>
+    </div>
+  </div>
+</div>
+`;
