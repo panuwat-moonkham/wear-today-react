@@ -9,8 +9,8 @@ const Container = styled.div`
   width: 100%;
   position: fixed;
   z-index: 10000;
-  background-color: ${props => (props.isScroll ? '#fff' : 'transparent')};
-  color: ${props => (props.isScroll ? '#000' : '#fff')};
+  background-color: ${props => (props.isScroll ? '#333' : 'transparent')};
+  color: ${props => (props.isScroll ? '#fff' : '#fff')};
   transition: background-color 0.5s;
 `
 const Wrapper = styled.div`
@@ -18,7 +18,6 @@ const Wrapper = styled.div`
   flex: 1;
   align-items: center;
   padding: 1rem;
-  justify-content: space-between;
 `
 
 const ActionContainer = styled.ul`
@@ -38,35 +37,106 @@ const Logo = styled.div`
   width: 6%;
 `
 
-function NavBar() {
+// const Main = styled.div``
+
+const DropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  a:hover {
+    background-color: #ddd;
+  }
+`
+
+const Dropbtn = styled.div`
+  color: white;
+  padding: 16px;
+  
+  border: none;
+`
+
+const Dropdown = styled.div`
+  position: relative;
+  display: inline-block;
+
+  &:hover ${DropdownContent} {
+    display: block;
+  }
+  &:hover ${Dropbtn} {
+    background-color: #333;
+  }
+`
+
+function NavBar () {
   const isScroll = useScroll({ scrollRange: 20 })
+
+  // function openNav () {
+  //   document.getElementById('mySidebar').style.width = '250px'
+  //   document.getElementById('main').style.marginLeft = '250px'
+  // }
+
+  // function closeNav () {
+  //   document.getElementById('mySidebar').style.width = '0'
+  //   document.getElementById('main').style.marginLeft = '0'
+  // }
   return (
     <Container isScroll={isScroll}>
       <Wrapper>
+        {/* <Sidebar id='mySidebar'>
+          <Link className='closebtn' onClick={closeNav}>
+            &times;
+          </Link>
+          <Link to='#'>About</Link>
+          <Link to='#'>Services</Link>
+          <Link to='#'>Clients</Link>
+          <Link to='#'>Contact</Link>
+          <SiteCover />
+        </Sidebar>
+        <Main id='main'>
+          <Openbtn onClick={openNav}>&#9776;</Openbtn>
+        </Main> */}
         <Logo>
-          <BackgroungBlock src={logoImage} height="8" />
+          <BackgroungBlock src={logoImage} height='8' />
         </Logo>
+
         <ActionContainer>
           <Action>
-            <Link to="/">HOME</Link>
+            <Link to='/'>HOME</Link>
           </Action>
           <Action>
-            <Link to="/post">POST</Link>
+            <Link to='/post'>POST</Link>
           </Action>
           <Action>
-            <Link to="/read">READ</Link>
+            <Link to='/read'>READ</Link>
           </Action>
           <Action>
-            <Link to="/help">HELP</Link>
+            {/* <Link to='/help'>SERVICE</Link> */}
+            <Dropdown>
+              <Link>
+                <Dropbtn>SERVICE</Dropbtn>
+
+              </Link>
+              <DropdownContent>
+                <Link to='/help'>Link 1</Link>
+                <Link to='/help'>Link 2</Link>
+                <Link to='/help'>Link 3</Link>
+              </DropdownContent>
+            </Dropdown>
           </Action>
           <Action>
-            <Link to="/about">About</Link>
-          </Action>
-          <Action>
-            <Link to="/contact">Contact</Link>
+            <Link to='/login'>LOGIN</Link>
           </Action>
         </ActionContainer>
-        <Login>*ปุ่มlogin*</Login>
       </Wrapper>
     </Container>
   )

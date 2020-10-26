@@ -1,11 +1,7 @@
 /* eslint-disable no-undef */
 // global fetch
 
-<<<<<<< HEAD
-import React from 'react'
-=======
-import React, { useState,useEffect } from 'react'
->>>>>>> 869a9eff3198b8b00466119d4b0e89196f58ccfc
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import withHelmet from '../utils/withHelmet'
 

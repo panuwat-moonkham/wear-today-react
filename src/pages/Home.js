@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import ShowItem from '../components/ShowItem'
 import image from '../assets/img2.jpg'
 import logoImage from '../assets/logo.png'
+import SlideShow from '../components/SlideShow'
 
 const Title = styled.div`
   text-align: center;
@@ -33,6 +34,7 @@ function Home () {
   return (
     <>
       <Container>
+        <SlideShow />
         <Content>
           <Title>TREND</Title>
           <Item>

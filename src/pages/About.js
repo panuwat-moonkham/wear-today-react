@@ -26,10 +26,10 @@ const Content = styled.div`
   }
 `
 
-function About() {
+function About () {
   return (
     <>
-      <BackgroundBlock src={image} height="30" />
+      <BackgroundBlock src={image} height='30' />
       <Container>
         <Title>About</Title>
         <Content id="content">

@@ -47,22 +47,22 @@ const Panel = styled.div`
   }
 `
 
-function Help() {
-  function openshow() {
+function Help () {
+  function openshow () {
     if (document.getElementById('show').style.display === 'none') {
       document.getElementById('show').style.display = 'block'
     } else {
       document.getElementById('show').style.display = 'none'
     }
   }
-  function openshow2() {
+  function openshow2 () {
     if (document.getElementById('show2').style.display === 'none') {
       document.getElementById('show2').style.display = 'block'
     } else {
       document.getElementById('show2').style.display = 'none'
     }
   }
-  function openshow3() {
+  function openshow3 () {
     if (document.getElementById('show3').style.display === 'none') {
       document.getElementById('show3').style.display = 'block'
     } else {
@@ -72,7 +72,7 @@ function Help() {
 
   return (
     <>
-      <BackgroundBlock src={image} height="30" />
+      <BackgroundBlock src={image} height='30' />
       <Container>
         <Title>Help</Title>
 
