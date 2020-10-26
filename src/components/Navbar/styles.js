@@ -4,8 +4,8 @@ export const Container = styled.div`
 width: 100%;
 position: fixed;
 z-index: 10000;
-background-color: ${props => (props.isScroll ? '#333' : 'transparent')};
-color: ${props => (props.isScroll ? '#fff' : '#fff')};
+background-color: ${props => (props.isScroll ? '#f1b39c' : 'transparent')};
+color: ${props => (props.isScroll ? '#212121' : '#fff')};
 transition: background-color 0.5s;
 `
 export const Wrapper = styled.div`
