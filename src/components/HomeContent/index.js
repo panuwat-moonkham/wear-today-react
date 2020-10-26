@@ -1,32 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import {Title, Container, Item, More, Content} from './styles'
 import { Link } from 'react-router-dom'
-import ShowItem from '../components/ShowItem'
-import image from '../assets/img2.jpg'
-import logoImage from '../assets/logo.png'
-import SlideShow from '../components/SlideShow'
-
-const Title = styled.div`
-  text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
-  padding: 1rem 0;
-  margin: 0 25%;
-  border-bottom: 1px solid;
-`
-
-const Container = styled.div``
-
-const Content = styled.div``
-
-const More = styled.p`
-  font-size: 1.5rem;
-  text-align: right;
-`
-
-const Item = styled.div`
-  display: flex;
-`
+import ShowItem from '../ShowItem'
+import image from '../../assets/img2.jpg'
+import logoImage from '../../assets/logo.png'
+import SlideShow from '../SlideShow'
 
 function HomeContent () {
   return (

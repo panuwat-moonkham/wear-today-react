@@ -1,5 +1,5 @@
 import React from 'react'
-import PostContent from '../components/PostContent'
+import PostContent from '../components/PostContent/index'
 
 function Post () {
   return (

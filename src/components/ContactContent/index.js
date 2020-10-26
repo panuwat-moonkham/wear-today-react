@@ -1,49 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
-import BackgroundBlock from '../components/BackgroundBlock'
-import image from '../assets/img2.jpg'
-import logoImage from '../assets/logo.png'
+import {Title, Container, Content, BigBlock, Block} from './styles'
+import BackgroundBlock from '../BackgroundBlock'
+import image from '../../assets/img2.jpg'
+import logoImage from '../../assets/logo.png'
 
-const Title = styled.div`
-  display: flex;
-  justify-content: center;
-  font-size: 80px;
-  color: white;
-`
-const Container = styled.div`
-  padding: 4rem 10rem;
-`
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`
-
-const BigBlock = styled.div`
-  width: 50%;
-  padding: 0 20px;
-`
-const Block = styled.div`
-  border-radius: 5px;
-  font-size: 24px;
-  background-color: #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 40px;
-  p {
-    padding-bottom: 20px;
-  }
-  a {
-    padding-bottom: 20px;
-    &:hover {
-      color: #878787;
-    }
-  }
-`
 
 function ContactContent () {
   return (
