@@ -91,24 +91,24 @@ const Button = styled.button`
   }
 `
 
-function SlideShow () {
+function SlideShow() {
   const slides = [
-    <BackgroundBlock key='1' src={image1} overlay='overlay'>
+    <BackgroundBlock key="1" src={image1} overlay="overlay">
       <SubTitle>travel</SubTitle>
       <Title>High Mountain Tourism</Title>
       <Button>View</Button>
     </BackgroundBlock>,
-    <BackgroundBlock key='2' src={image2} overlay='overlay'>
+    <BackgroundBlock key="2" src={image2} overlay="overlay">
       <SubTitle>trend</SubTitle>
       <Title>Jeans</Title>
       <Button>View</Button>
     </BackgroundBlock>,
-    <BackgroundBlock key='3' src={image3} overlay='overlay'>
+    <BackgroundBlock key="3" src={image3} overlay="overlay">
       <SubTitle>travel</SubTitle>
       <Title>City And River</Title>
       <Button>View</Button>
     </BackgroundBlock>,
-    <BackgroundBlock key='4' src={image4} overlay='overlay'>
+    <BackgroundBlock key="4" src={image4} overlay="overlay">
       <SubTitle>trend</SubTitle>
       <Title>Sweater</Title>
       <Button>View</Button>
@@ -136,7 +136,6 @@ function SlideShow () {
         })}
         <LeftButton onClick={handleGoLeft}>&#10094;</LeftButton>
         <RightButton onClick={handleGoRight}>&#10095;</RightButton>
-
       </Container>
     </>
   )
