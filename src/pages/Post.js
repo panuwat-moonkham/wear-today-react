@@ -4,6 +4,15 @@ import BackgroundBlock from '../components/BackgroundBlock'
 import Editor from '../components/Editor'
 import image from '../assets/img2.jpg'
 
+
+
+const Title = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 80px;
+  color:white;
+`
+
 const Container = styled.div`
   padding: 2rem 6rem;
   display:flex;
@@ -41,7 +50,7 @@ const Content = styled.div`
 function Post () {
   return (
     <>
-      <BackgroundBlock src={image} height='30' overlay='overlay' />
+      <BackgroundBlock src={image} height="40" overlay='overlay' ><Title>Post</Title></BackgroundBlock>
       <Container>
         <Content id='content'>
           <from>
