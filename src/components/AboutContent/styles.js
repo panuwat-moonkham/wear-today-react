@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   font-size: 24px;
   padding: 50px;
-  background-color: #ccc;
+  background-color: #ff8f84;
   border-radius: 5px;
 
   h1 {
