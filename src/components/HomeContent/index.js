@@ -1,5 +1,5 @@
 import React from 'react'
-import {Title, Container, Item, More, Content} from './styles'
+import { Title, Container, Item, Content } from './styles'
 import { Link } from 'react-router-dom'
 import ShowItem from '../ShowItem'
 import image from '../../assets/img2.jpg'
@@ -27,10 +27,6 @@ function HomeContent () {
               <p>What a beautiful sunrise</p>
             </ShowItem>
           </Item>
-
-          <More>
-            <Link>more...</Link>
-          </More>
         </Content>
         <Content>
           <Title>THE JOURNEY</Title>
@@ -45,9 +41,6 @@ function HomeContent () {
               <p>What a beautiful sunrise</p>
             </ShowItem>
           </Item>
-          <More>
-            <Link>more...</Link>
-          </More>
         </Content>
         <Content>
           <Title>STYLE</Title>
@@ -65,9 +58,6 @@ function HomeContent () {
               <p>What a beautiful sunrise</p>
             </ShowItem>
           </Item>
-          <More>
-            <Link>more...</Link>
-          </More>
         </Content>
         <Item>
           <ShowItem src={logoImage} height='40' overlay='none' />
