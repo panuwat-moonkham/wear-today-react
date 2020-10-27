@@ -31,5 +31,9 @@ export default {
   Help: {
     path: '/help',
     component: lazy(() => import('../pages/Help'))
+  },
+  ReadPost: {
+    path: '/ReadPost/:id',
+    component: lazy(() => import('../pages/ReadPost'))
   }
 }
