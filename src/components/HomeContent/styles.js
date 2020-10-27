@@ -16,6 +16,7 @@ export const Content = styled.div``
 export const More = styled.p`
   font-size: 1.5rem;
   text-align: right;
+  color: #212121;
 `
 
 export const Item = styled.div`

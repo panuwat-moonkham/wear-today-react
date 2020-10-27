@@ -5,34 +5,34 @@ exports[`Navbar should render Logo layout correcyly 1`] = `undefined`;
 exports[`Navbar should render layout correcyly 1`] = `
 <div>
   <div
-    class="sc-dlnjPT jLdvev"
+    class="sc-bdnylx eFvfMq"
   >
     <div
-      class="sc-hKFyIo kYnWLp"
+      class="sc-gtssRu mUgFr"
     >
       <div
-        class="sc-iCoHVE ecAjJP"
+        class="sc-jSFkmK eIAFAH"
       >
         <a
           href="/"
         >
           <div
-            class="sc-bdnylx WVWuq"
+            class="sc-pNWxx cvPoBq"
             height="8"
             src="logo.png"
             width="100"
           >
             <div
-              class="sc-gtssRu fLfzOz"
+              class="sc-jrsJCI dtMWiw"
             />
           </div>
         </a>
       </div>
       <ul
-        class="sc-eCApGN hiDcNC"
+        class="sc-dlnjPT cMDBow"
       >
         <li
-          class="sc-jSFkmK kVmsyM"
+          class="sc-hKFyIo fNhXog"
         >
           <a
             href="/"
@@ -41,7 +41,7 @@ exports[`Navbar should render layout correcyly 1`] = `
           </a>
         </li>
         <li
-          class="sc-jSFkmK kVmsyM"
+          class="sc-hKFyIo fNhXog"
         >
           <a
             href="/post"
@@ -50,7 +50,7 @@ exports[`Navbar should render layout correcyly 1`] = `
           </a>
         </li>
         <li
-          class="sc-jSFkmK kVmsyM"
+          class="sc-hKFyIo fNhXog"
         >
           <a
             href="/read"
@@ -59,22 +59,18 @@ exports[`Navbar should render layout correcyly 1`] = `
           </a>
         </li>
         <li
-          class="sc-jSFkmK kVmsyM"
+          class="sc-hKFyIo fNhXog"
         >
           <div
-            class="sc-jrsJCI kOXQdV"
+            class="sc-fujyUd dOCgor"
           >
-            <a
-              href=""
-            >
-              <div
-                class="sc-pNWxx cAGREy"
-              >
-                SERVICE
-              </div>
-            </a>
             <div
-              class="sc-fujyUd emIfTs"
+              class="sc-iCoHVE fhoggF"
+            >
+              SERVICE
+            </div>
+            <div
+              class="sc-gKAblj dzXQzQ"
             >
               <a
                 href="/help"
@@ -95,7 +91,7 @@ exports[`Navbar should render layout correcyly 1`] = `
           </div>
         </li>
         <li
-          class="sc-jSFkmK kVmsyM"
+          class="sc-hKFyIo fNhXog"
         >
           <a
             href="/login"

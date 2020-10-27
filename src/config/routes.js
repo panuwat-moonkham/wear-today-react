@@ -24,10 +24,14 @@ export default {
     path: '/read',
     component: lazy(() => import('../pages/Read'))
   },
-  // LoginRegister: {
-  //   path: '/login',
-  //   component: lazy(() => import('../pages/LoginRegister'))
-  // },
+  Read: {
+    path: '/story',
+    component: lazy(() => import('../pages/Story'))
+  },
+  LoginRegister: {
+    path: '/login',
+    component: lazy(() => import('../pages/LoginRegister'))
+  },
   Help: {
     path: '/help',
     component: lazy(() => import('../pages/Help'))

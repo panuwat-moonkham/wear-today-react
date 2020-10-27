@@ -12,8 +12,8 @@ export const Container = styled.div`
 `
 
 export const Accordion = styled.button`
-  background-color: #ccc;
-  color: black;
+  background-color: #ff8f84;
+  color: #212121;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -26,7 +26,8 @@ export const Accordion = styled.button`
   border-radius: 5px;
 
   &:hover {
-    background-color: #878787;
+    background-color: #f7f2e9;
+    color: #060301;
   }
   p {
     padding: 0.5rem 2rem;
@@ -35,7 +36,7 @@ export const Accordion = styled.button`
 `
 export const Panel = styled.div`
   padding: 0.5rem 4rem;
-  background-color: #ececec;
+  background-color: green;
   display: none;
   border-radius: 5px;
 
