@@ -20,4 +20,13 @@ export const More = styled.p`
 
 export const Item = styled.div`
   display: flex;
+
+  h4{
+    font-size:3rem;
+    margin-bottom:1rem;
+    border-bottom:4px solid black;
+  }
+  p{
+    font-size:2rem;
+  }
 `
